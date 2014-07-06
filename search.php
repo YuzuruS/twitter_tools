@@ -4,16 +4,16 @@ require_once 'define.php';
 
 $twitter = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET);
 
+
+// 検索したユーザのscreen_name一覧取得
 $url = 'https://api.twitter.com/1.1/search/tweets.json';
 $tweets = $twitter->get($url, array('q' => urlencode(SEARCH_QUERRY), 'count' => SEARCH_CNT, 'lang' => 'ja'));
 $tweets_screen_name = array();
-// 検索したユーザのscreen_name一覧取得
 foreach ($tweets->statuses as $tweet) {
 	if (!empty($tweet->user->screen_name)) {
 		$tweets_screen_name[] = $tweet->user->screen_name;
 	}
 }
-
 
 // フォロアーのscreen_name一覧取得 
 $friends = $twitter->get('friends/list');
