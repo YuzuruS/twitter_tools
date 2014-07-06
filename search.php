@@ -15,7 +15,7 @@ foreach ($tweets->statuses as $tweet) {
 }
 
 
-// screen_name一覧取得
+// フォロアーのscreen_name一覧取得 
 $friends = $twitter->get('friends/list');
 $friends_screen_name = array();
 foreach($friends->users as $friend) {
