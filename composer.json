@@ -1,0 +1,12 @@
+{
+	"name": "twitter_tools",
+	"authors": [
+		{
+			"name": "YuzuruS",
+			"email": "navitima@gmail.com"
+		}
+	],
+	"require": {
+		"kertz/twitteroauth": "dev-master"
+	}
+}
