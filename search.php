@@ -27,7 +27,10 @@ foreach($friends->users as $friend) {
 $cnt = 0;
 foreach ($tweets_screen_name as $sn) {
 	if (!in_array($sn, $friends_screen_name)) {
-		$twitter->post('friendships/create', array('screen_name' => $sn));
+                if(!empty($res->errors[0]->code) && $res->errors[0]->code == 161) {
+                        mail(TO_MAIL,FROM_MAIL,SUBJECT,ERROR_MSG);
+                        exit();
+                }
 		echo "Follow {$sn}\n";
 		sleep(SLEEP_TIME_SEC);
 		$cnt++;
