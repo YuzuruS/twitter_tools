@@ -1,4 +1,4 @@
-# auto_follow
+# twitter_tools 
 ## searh.php
 ### 検索キーワードをつぶやいているユーザをフォローします。
 ## back.php
