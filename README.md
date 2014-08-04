@@ -19,7 +19,7 @@ $ php hoge.php
 crontabを使って1日に1回実行などしてください。
 
 # Version
-2014/08/04 Version 1.0.4 unfollow.php追加
+2014/08/04 Version 1.0.4 unfollow.php追加  
 2014/08/03 Version 1.0.3 post.php追加  
 2014/07/30 Version 1.0.2 composer 対応  
 2014/07/05 Version 1.0.1 search.php 追加  
