@@ -1,4 +1,4 @@
-vendor/*
+common/vendor/*
 
 # OS generated files #
 ######################

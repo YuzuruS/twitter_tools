@@ -1,11 +1,12 @@
 <?php
 require_once 'vendor/autoload.php';
-require_once 'define.php';
 
 $twitter = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET);
 
+
+// 検索したユーザのscreen_name一覧取得
 $url = 'https://api.twitter.com/1.1/statuses/update.json';
-$file_path = __DIR__ . '/data/tweet.txt';
+$file_path = __DIR__ . '/../data/' . TWEET_FILE_NAME;
 $fp = fopen($file_path, "r");
 $file_count = count(file($file_path));
 $i = time()%$file_count;
