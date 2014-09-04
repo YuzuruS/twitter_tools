@@ -9,7 +9,7 @@ $url = 'https://api.twitter.com/1.1/statuses/update.json';
 $file_path = __DIR__ . '/../data/' . TWEET_FILE_NAME;
 $fp = fopen($file_path, "r");
 $file_count = count(file($file_path));
-$i = time()%$file_count;
+$i = mt_rand()%$file_count;
 $cnt = 0;
 while ($line = fgets($fp)) {
 	if($i == $cnt) {
