@@ -28,6 +28,7 @@ foreach ($tweets_screen_name as $sn) {
 	if (!in_array($sn, $friends_screen_name)) {
 		$res = $twitter->post('friendships/create', array('screen_name' => $sn));
 		if(!empty($res->errors[0]->code)) {
+			$associative_array = debug_backtrace();
 			mail('navitima@gmail.com','navitima@gmail.com',$associative_array[0]['file'];,'error! code:' . $res->errors[0]->code);
 			exit();
 		}
