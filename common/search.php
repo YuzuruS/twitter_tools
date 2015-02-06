@@ -28,7 +28,7 @@ foreach ($tweets_screen_name as $sn) {
 	if (!in_array($sn, $friends_screen_name)) {
 		$res = $twitter->post('friendships/create', array('screen_name' => $sn));
                 if(!empty($res->errors[0]->code) && $res->errors[0]->code == 161) {
-                        mail('navitima@gmail.com','navitima@gmail.com',__DIR__,'error!');
+                        mail('navitima@gmail.com','navitima@gmail.com',basename(__FILE__),'error! code:' . $res->errors[0]->code);
                         exit();
                 }
 		echo "Follow {$sn}\n";
