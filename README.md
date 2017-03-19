@@ -1,4 +1,6 @@
-# twitter_tools 
+# twitter_tools
+## rss.php
+指定したRSS URLを自動でポストします。
 ## searh.php
 検索キーワードをつぶやいているユーザをフォローします。
 ## back.php
@@ -21,6 +23,7 @@ $ php hoge.php
 crontabを使って1日に1回実行などしてください。
 
 # Version
+2017/03/19 Version 1.0.6 rss.php追加
 2015/02/12 Version 1.0.5 unfollow2.php追加  
 2014/08/04 Version 1.0.4 unfollow.php追加  
 2014/08/03 Version 1.0.3 post.php追加  

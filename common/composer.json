@@ -7,6 +7,9 @@
 		}
 	],
 	"require": {
-		"kertz/twitteroauth": "dev-master"
+		"kertz/twitteroauth": "dev-master",
+		"yuzuru-s/parse-rss": "dev-master",
+		"opauth/opauth": "*",
+		"opauth/twitter": "*"
 	}
 }
